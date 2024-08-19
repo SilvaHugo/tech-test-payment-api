@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "0c94511c-4fe2-43c5-8473-7714a97833da",
+		"name": "PottencialSeguradora",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37753293"
+	},
+	"item": [
+		{
+			"name": "Venda",
+			"item": [
+				{
+					"name": "Obter Venda",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "{{apikey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"vendaId\": \"BC254FCD-169B-46E0-9FC2-394778051D86\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7136/venda/obter-venda",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7136",
+							"path": [
+								"venda",
+								"obter-venda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir Venda",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "{{apikey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"produtos\": [\r\n    {\r\n      \"nomeProduto\": \"teste produto 1\",\r\n      \"valorProduto\": 15\r\n    },\r\n    {\r\n      \"nomeProduto\": \"teste produto 2\",\r\n      \"valorProduto\": 115.48\r\n    }\r\n  ],\r\n  \"vendedorId\": \"D851C0BF-1D5D-4E25-9AC4-52495B6DB65C\",\r\n  \"dataVenda\": \"2024-08-18T11:58:58.002Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7136/venda/incluir-venda",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7136",
+							"path": [
+								"venda",
+								"incluir-venda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Status Venda",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "{{apikey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"vendaId\": \"EB3A7907-EB56-45CE-B055-762E93CD09DA\",\r\n  \"statusVenda\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7136/venda/atualizar-status-venda",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7136",
+							"path": [
+								"venda",
+								"atualizar-status-venda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancelar Venda",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "{{apikey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"vendaId\": \"EB3A7907-EB56-45CE-B055-762E93CD09DA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7136/venda/cancelar-venda",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7136",
+							"path": [
+								"venda",
+								"cancelar-venda"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produto",
+			"item": [
+				{
+					"name": "Incluir Produto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "{{apikey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"produtos\": [\r\n    {\r\n      \"nomeProduto\": \"teste\",\r\n      \"valorProduto\": 50\r\n    }\r\n  ],\r\n  \"vendaId\": \"B3894B4D-F25D-4F34-92D9-4719EBBA66E4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7136/produto/incluir-produto",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7136",
+							"path": [
+								"produto",
+								"incluir-produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover Produto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "{{apikey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idsProdutos\": [\r\n        \"8a1405e2-5704-4c4d-87e7-238a3f6b7780\"\r\n    ],\r\n    \"vendaId\": \"B3894B4D-F25D-4F34-92D9-4719EBBA66E4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7136/produto/remover-produto",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7136",
+							"path": [
+								"produto",
+								"remover-produto"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "apikey",
+			"value": "2d9c4876-70b2-47d2-a75a-e3b5e8810a5b",
+			"type": "string"
+		}
+	]
+}

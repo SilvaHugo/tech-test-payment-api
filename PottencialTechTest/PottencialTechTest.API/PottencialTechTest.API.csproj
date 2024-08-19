@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PottencialTechTest.App.Api\PottencialTechTest.App.Api.csproj" />
+    <ProjectReference Include="..\PottencialTechTest.Data.Infra\PottencialTechTest.Data.Infra.csproj" />
+    <ProjectReference Include="..\PottencialTechTest.Domain\PottencialTechTest.Domain.csproj" />
+    <ProjectReference Include="..\PottencialTechTest.Infra\PottencialTechTest.Infra.csproj" />
+  </ItemGroup>
+
+</Project>
